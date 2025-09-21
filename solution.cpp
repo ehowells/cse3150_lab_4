@@ -49,7 +49,6 @@ bool move_right(vector<vector<int>>& board){return false;}
 bool move_up(vector<vector<int>>& board){return false;}
 bool move_down(vector<vector<int>>& board){return false;}
 
-// TODO: compute score by summing board values
 int compute_score(const vector<vector<int>>& board) {
     int score = 0;
     for(const auto& row : board) {
@@ -77,7 +76,6 @@ int main(){
         if (cmd=='q') break;
 
         if (cmd=='u') {
-            // TODO: Implement undo handling here using the history stack
             if(!history.empty()) {
                 board = history.top();
                 history.pop();
@@ -94,7 +92,6 @@ int main(){
         else if (cmd=='s') moved=move_down(board);
 
         if (moved) {
-            // TODO: push prev to history stack for undo
             history.push(prev);
             spawn_tile(board);
         }
