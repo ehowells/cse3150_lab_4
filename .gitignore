@@ -55,6 +55,6 @@ cse3150_week_4_lab_and_hw.pdf
 .idea/
 
 # Python files
-.py
+*.py
 __pycache__/
 .pytest_cache/
