@@ -1,0 +1,60 @@
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+build/
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Compiled executable & lab information
+solution
+starter.cpp
+cse3150_week_4_lab_and_hw.pdf
+
+# debug information files
+*.dwo
+
+# macOS system files
+.DS_Store
+
+# IDE/project specific files (optional)
+.vscode/
+.idea/
+
+# Python files
+.py
+__pycache__/
+.pytest_cache/
