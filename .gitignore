@@ -60,3 +60,6 @@ game_input.csv
 *.py
 __pycache__/
 .pytest_cache/
+
+# Whatever this is
+solution.dSYM/

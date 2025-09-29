@@ -5,20 +5,19 @@ CXXFLAGS := -std=c++17 -g
 # Target executable
 TARGET := solution
 SRC := solution.cpp
-OBJ := $(SRC:.cpp=.o)
 
-.PHONY: all clean test
+.PHONY: all clean test run
 
 # Default target
 all: $(TARGET)
 
-# Build executable
-$(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+# Build executable directly from source
+$(TARGET): $(SRC)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 
-# Compile source into object file
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+# Run the C++ game
+run: $(TARGET)
+	./$(TARGET)
 
 # Run Python tests
 test: $(TARGET)
@@ -26,4 +25,4 @@ test: $(TARGET)
 
 # Clean build artifacts
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -f $(TARGET)
