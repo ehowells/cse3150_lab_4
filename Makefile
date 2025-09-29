@@ -1,28 +1,27 @@
-# Compiler and flags
-CXX := g++
-CXXFLAGS := -std=c++17 -g
+# Compiler settings
+CXX = g++
+CXXFLAGS = -std=c++17 -g -Wall
 
 # Target executable
-TARGET := solution
-SRC := solution.cpp
+TARGET = solution
 
-.PHONY: all clean test run
+# Source files
+SOURCES = solution.cpp
 
 # Default target
 all: $(TARGET)
 
-# Build executable directly from source
-$(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
+# Build the executable
+$(TARGET): $(SOURCES)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCES)
 
-# Run the C++ game
-run: $(TARGET)
-	./$(TARGET)
-
-# Run Python tests
+# Run tests
 test: $(TARGET)
 	pytest test_game.py
 
-# Clean build artifacts
+# Clean up compiled files
 clean:
 	rm -f $(TARGET)
+
+# Phony targets (not actual files)
+.PHONY: all test clean
