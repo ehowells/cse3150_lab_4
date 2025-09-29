@@ -44,6 +44,7 @@ solution
 starter.cpp
 cse3150_week_4_lab_and_hw.pdf
 game_output.csv
+game_input.csv
 
 # debug information files
 *.dwo
